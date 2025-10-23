@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <div name="main-div" class="mainContainer">
+        
+      <div name="input-side" class="input-side">
+        <form action="/register" method="post" class="register-form">
+          <div class="headings-container">
+            <h1>Welcome</h1>
+            <h3>read yourslef out this is yours to explore</h3>
+          </div>
+
+          <div>
+            <label class="hide" for="username">Username:</label>
+            <input
+              placeholder="Email"
+              class="textFiled"
+              type="text"
+              id="username"
+              name="username"
+              required
+            />
+          </div>
+          <div>
+            <label class="hide" for="email">Email:</label>
+            <input
+              placeholder="Create Password"
+              class="textFiled"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div>
+            <label class="hide" for="password">Password:</label>
+            <input
+              placeholder="Rewrite Passowrd"
+              class="textFiled"
+              type="password"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+          <div>
+            <button class="submitButton" type="submit">Register</button>
+          </div>
+
+          <p style="font-size: small; opacity: 0.5">
+            have an account?
+            <a href="/login" style="text-decoration: none">Login here</a>
+          </p>
+        </form>
+      </div>
+
+      <div name="fillup-side" class="fillup-side hide">
+        <div class="overlay">
+          <h1>Explore. Learn. Grow.</h1>
+          <p>
+            <p>
+            Create your free account today and become part of a growing network
+            of readers, learners, and creators. Register to access exclusive
+            content, save your favorite books, and enjoy a personalized
+            experience every time you visit. It only takes a minute to sign up
+            and start exploring!
+          </p>
+          </p>
+        </div>
+        <img
+          class="image"
+          src="assets/images/Screenshot 2025-10-24 035908.png"
+          alt=""
+        />
+       
+      </div>
+    </div>
+  </body>
+</html>

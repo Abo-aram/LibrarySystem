@@ -1,0 +1,171 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* prevent scrolling */
+}
+
+
+/*colors variables*/
+:root {
+  --primary-color: #4A90E2;
+  --secondary-color: #50E3C2;   
+    --background-color: #F5F7FA;
+    --text-color: #4A4A4A;
+    --input-background: #ffffffd6;
+    --input-border: #CCCCCC;
+    --button-background: #4A90E2;
+    --button-text-color: #FFFFFF;
+    --button-hover-background: #357ABD;
+}
+
+
+
+.hide{
+    display:    none;
+}
+
+
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0;
+  align-items: end;
+  background-image: url('../assets/images/backgroundimage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+
+  
+}
+
+
+
+
+
+.input-side{
+     box-shadow: 2px 4px 30px black;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    height: 75%;
+    width: 100%;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 80%;
+    
+
+}
+
+.textFiled{
+   padding: 15px 10px;   
+   width: 280px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--input-background);
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.submitButton{
+    padding: 15px 25px;
+    background-color: black;
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+.headings-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+/* 2. Tablet */
+@media (min-width: 768px) {
+ 
+}
+
+/* 3. PC / Desktop */
+@media (min-width: 768px) {
+    .mainContainer {
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+ 
+    .fillup-side{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        overflow: scroll;
+        scrollbar-width: none; /* Firefox */
+        
+        justify-content: space-around;
+        width: 45%;
+        height: 75%;
+        background-color: var(--primary-color);
+        border-radius: 0 20px 20px 0;
+        box-shadow: 5px 0px 15px black;
+        
+        
+    }
+
+    .input-side{
+        width: 45%;
+        border-radius: 0;
+         border-radius: 20px 0 0 20px;
+        
+    }
+
+    .register-form {
+        height: 100%;
+        
+    }
+
+    .image {
+        width: 80%;
+        border-radius: 20px;
+        
+        height: auto;
+    }
+    
+    .overlay{
+        
+        width: 80%;
+        height: auto;
+
+
+    }
+
+}
+
+
+
