@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+        :root {
+  --primary-color: #deb887;
+  --secondary-color: #50E3C2;   
+    --background-color: #F5F7FA;
+    --text-color: #4A4A4A;
+    --input-background: #ffffffd6;
+    --input-border: #CCCCCC;
+    --button-background: #4A90E2;
+    --button-text-color: #FFFFFF;
+    --button-hover-background: #357ABD;
+}
+
+      /* Reset default browser styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+      header{
+        background-color: var(--background-color);
+        color: var(--primary-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:  0.5%;
+        
+      }
+
+        header h1 {
+           
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+           
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .UserProfile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+
+
+
+        .Login {
+            width: 80px;
+            height: 30px;
+            font-size: larger;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register {
+            width: 80px;
+            height: 30px;
+            font-size: larger;
+            
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register:hover {
+           
+            color: rgba(0, 0, 255, 0.855);
+        }
+
+        .Login:hover {
+            color: rgba(0, 0, 255, 0.855);
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>KurdLit</h1>
+      <nav>
+        <ul>
+            <li class="hidden">
+                <div class="UserProfile">
+                 
+
+                </div>
+            </li>
+
+            <li>
+                <div class="Login">
+                    Login
+
+                </div>
+            </li>
+            <li>
+                <div class="register">
+                    register
+
+                </div>
+            </li>
+            
+          
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

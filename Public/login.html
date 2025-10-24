@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <div name="main-div" class="mainContainer">
+        
+      <div name="input-side" class="input-side">
+        <form action="/register" method="post" class="register-form">
+          <div class="headings-container">
+            <div class="logo-container">
+              <h1 class="logo">KurdLit</h1>
+            </div>
+            <h1>Welcome Back</h1>
+            <h3>Your favorite book is waiting for you</h3>
+          </div>
+
+          <div>
+            
+            <input
+              placeholder="Email"
+              class="textFiled"
+              type="text"
+              id="username"
+              name="username"
+              required
+            />
+          </div>
+          <div>
+            
+            <input
+              placeholder="Create Password"
+              class="textFiled"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+         
+          <div>
+            <button class="submitButton" type="submit">Login</button>
+          </div>
+
+          <p style="font-size: small; opacity: 0.5">
+            have an account?
+            <a href="/login" style="text-decoration: none">Login here</a>
+          </p>
+        </form>
+      </div>
+
+      <div name="fillup-side" class="fillup-side hide">
+        <div class="overlay">
+          <h1>Welcome Back!</h1>
+          <p>
+            Log in to reconnect with your world of books,
+            learning, and creativity. Access your personalized library, pick up
+            where you left off, and continue your journey of discovery. Sign in
+            now and make the most of your reading experience!
+          </p>
+          
+        </div>
+        <div style="width: 500px; height: 500px; margin-top: 20px; padding-left:20%;">
+           <img
+          class="image"
+          src="assets/images/book.png"
+          
+          alt=""
+        />
+          
+        </div>
+       
+       
+      </div>
+    </div>
+  </body>
+</html>

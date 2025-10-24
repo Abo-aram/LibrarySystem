@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    background-color: #f0f0f0; /* optional, for the sides */
+}
+
+.container {
+    width: 1200px; /* fixed width */
+    max-width: 100%; /* allows smaller screens to shrink */
+    background-color: white; /* main content background */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* optional */
+}

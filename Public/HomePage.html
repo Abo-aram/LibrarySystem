@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HomePage</title>
+<link rel="stylesheet" href="css/HomePage.css">
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const res = await fetch('./includes/header.html');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const html = await res.text();
+        const container = document.createElement('div');
+        container.innerHTML = html;
+        
+        // insert the header at the top of the body
+        document.body.prepend(container);
+    } catch (err) {
+        console.error('Failed to load header.html:', err);
+    }
+});
+</script>
+
+</head>
+<body >
+    
+
+<div id="main-container" class="main-container">
+    
+    
+    <h1>Your gateway to a world of books and knowledge.</h1>
+    <div class="main-grid">
+
+    </div>
+
+</div>
+
+</body>
+</html>
