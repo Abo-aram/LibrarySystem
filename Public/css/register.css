@@ -130,11 +130,6 @@ html, body {
 
 
 
-/* 2. Tablet */
-@media (min-width: 768px) {
- 
-}
-
 /* 3. PC / Desktop */
 @media (min-width: 768px) {
     .mainContainer {

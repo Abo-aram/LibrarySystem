@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HomePage</title>
-<link rel="stylesheet" href="css/HomePage.css">
-<script>
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const res = await fetch('./includes/header.html');
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const html = await res.text();
-        const container = document.createElement('div');
-        container.innerHTML = html;
-        
-        // insert the header at the top of the body
-        document.body.prepend(container);
-    } catch (err) {
-        console.error('Failed to load header.html:', err);
-    }
-});
-</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="stylesheet" href="css/HomePage.css" />
+  </head>
+  <body>
+    <div id="main-container" class="main-container">
+      <div id="SearchBarDiv" class="SearchBarDiv">
+        <div id="filterAndSearchDiv" class="filterAndSearchDiv">
+          <div class="filter" id="filter" name="filter">
+            <img src="./assets/icons/filter .png" alt="" />
+          </div>
+          <input
+            id="SearchBar"
+            name="SearchBtn"
+            class="SearchBar"
+            type="text"
+            placeholder="Search for books, authors, genres..."
+          />
+        </div>
 
-</head>
-<body >
-    
+        <button id="SearchBtn" name="SearchBtn" class="SearchBtn" type="button">
+          Search
+        </button>
+      </div>
 
-<div id="main-container" class="main-container">
-    
-    
-    <h1>Your gateway to a world of books and knowledge.</h1>
-    <div class="main-grid">
+      <div class="grid-container">
+        <div class="item">
+            <div name="book-image" class="book-image" >
+                
+            </div>
+            <div name="book-details" class="book-details">
+                <h3>Book 1</h3>
+                <p>book about geography of a country</p>
 
+
+            </div>
+        </div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+      </div>
     </div>
 
-</div>
-
-</body>
+    <script src="./js/HomePage.js"></script>
+  </body>
 </html>
