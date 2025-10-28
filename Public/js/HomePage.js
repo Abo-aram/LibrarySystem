@@ -5,9 +5,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         const html = await res.text();
         const container = document.createElement('div');
         container.innerHTML = html;
-        
+
         // insert the header at the top of the body
         document.body.prepend(container);
+
+        if (window.LibraryTheme && typeof window.LibraryTheme.refreshToggles === 'function') {
+            window.LibraryTheme.refreshToggles();
+        }
     } catch (err) {
         console.error('Failed to load header.html:', err);
     }
