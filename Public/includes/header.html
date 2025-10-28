@@ -1,144 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<header class="site-header">
+  <style>
+    .site-header {
+      background-color: var(--card-background);
+      color: var(--text-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      width: 100%;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      gap: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-    <style>
+    .site-title {
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var(--primary-color);
+      font-size: 24px;
+    }
 
-        :root {
-  --primary-color: #deb887;
-  --secondary-color: #50E3C2;   
-    --background-color: #F5F7FA;
-    --text-color: #4A4A4A;
-    --input-background: #ffffffd6;
-    --input-border: #CCCCCC;
-    --button-background: #4A90E2;
-    --button-text-color: #FFFFFF;
-    --button-hover-background: #357ABD;
-}
+    .site-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+    }
 
-      /* Reset default browser styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    .site-nav a,
+    .site-nav button {
+      text-decoration: none;
+      font-size: 16px;
+      color: var(--text-color);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 999px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav button:hover {
+      background-color: var(--input-background);
+    }
+
+    .site-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .theme-toggle {
+      border: none;
+      border-radius: 999px;
+      padding: 8px 16px;
+      background-color: var(--input-background);
+      color: var(--text-color);
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px var(--shadow-color);
+    }
+
+    @media (max-width: 768px) {
+      .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
       }
-    
-      header{
-        background-color: var(--background-color);
-        color: var(--primary-color);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding:  0.5%;
+
+      .site-actions {
         width: 100%;
-        
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
       }
 
-        header h1 {
-           
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-           
-        }
+      .theme-toggle {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .UserProfile {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-        }
-
-
-
-        .Login {
-            width: 80px;
-            height: 30px;
-            font-size: larger;
-           
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            
-            color: black;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .register {
-            width: 80px;
-            height: 30px;
-            font-size: larger;
-            
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            color: black;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .register:hover {
-           
-            color: rgba(0, 0, 255, 0.855);
-        }
-
-        .Login:hover {
-            color: rgba(0, 0, 255, 0.855);
-        }
-
-
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>KurdLit</h1>
-      <nav>
-        <ul>
-            <li class="hidden">
-                <div class="UserProfile">
-                 
-
-                </div>
-            </li>
-
-            <li>
-                <div class="Login">
-                    Login
-
-                </div>
-            </li>
-            <li>
-                <div class="register">
-                    register
-
-                </div>
-            </li>
-            
-          
-        </ul>
-      </nav>
-    </header>
-  </body>
-</html>
+  <h1 class="site-title">KurdLit</h1>
+  <nav class="site-nav">
+    <ul>
+      <li class="site-actions">
+        <a class="login-link" href="/login">Login</a>
+        <a class="register-link" href="/register">Register</a>
+        <button class="theme-toggle" type="button" aria-pressed="false">🌙</button>
+      </li>
+    </ul>
+  </nav>
+</header>
