@@ -3,47 +3,30 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden; /* prevent scrolling */
 }
 
-/* Color variables */
+
+/*colors variables*/
 :root {
   --primary-color: #deb887;
-  --secondary-color: #50e3c2;
-  --background-color: #f5f7fa;
-  --text-color: #4a4a4a;
-  --muted-text-color: #6b6b6b;
-  --input-background: #ffffffd6;
-  --input-border: #cccccc;
-  --button-background: #4a90e2;
-  --button-text-color: #ffffff;
-  --button-hover-background: #357abd;
-  --card-background: #ffffff;
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --secondary-color: #50E3C2;   
+    --background-color: #F5F7FA;
+    --text-color: #4A4A4A;
+    --input-background: #ffffffd6;
+    --input-border: #CCCCCC;
+    --button-background: #4A90E2;
+    --button-text-color: #FFFFFF;
+    --button-hover-background: #357ABD;
 }
 
-:root[data-theme='dark'] {
-  --primary-color: #cfa06b;
-  --secondary-color: #3bb59d;
-  --background-color: #121212;
-  --text-color: #e0e0e0;
-  --muted-text-color: #b0b0b0;
-  --input-background: #1f1f1f;
-  --input-border: #3a3a3a;
-  --button-background: #357abd;
-  --button-text-color: #ffffff;
-  --button-hover-background: #4a90e2;
-  --card-background: #1e1e1e;
-  --shadow-color: rgba(0, 0, 0, 0.5);
+
+
+.hide{
+    display:    none;
 }
 
-.hide {
-  display: none;
-}
+
 
 .mainContainer {
   width: 100%;
@@ -55,156 +38,153 @@ html, body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+  
+
+  
 }
 
-.theme-toggle {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  border: none;
-  border-radius: 999px;
-  padding: 8px 16px;
-  background-color: var(--input-background);
-  color: var(--text-color);
-  cursor: pointer;
-  font-size: 16px;
-  box-shadow: 0 4px 10px var(--shadow-color);
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
 
-.theme-toggle:hover {
-  transform: translateY(-1px);
-}
 
-.input-side {
-  box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  background-color: var(--card-background);
-  height: 75%;
-  width: 100%;
-  margin: 0;
-  border-radius: 20px 20px 0 0;
-  backdrop-filter: blur(6px);
+
+
+.input-side{
+     box-shadow: 2px 4px 30px black;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    height: 75%;
+    width: 100%;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .register-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 80%;
-  color: var(--text-color);
-}
-
-.textFiled {
-  padding: 15px 10px;
-  width: 280px;
-  border: 1px solid var(--input-border);
-  border-radius: 10px;
-  background-color: var(--input-background);
-  font-size: 16px;
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-.textFiled:focus {
-  outline: none;
-  border-color: var(--primary-color);
-}
-
-.submitButton {
-  padding: 15px 25px;
-  background-color: var(--button-background);
-  color: var(--button-text-color);
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.submitButton:hover {
-  background-color: var(--button-hover-background);
-  transform: translateY(-1px);
-}
-
-iframe {
-  width: 100%;
-  height: 100vh;
-  border: none;
-}
-
-.headings-container {
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--text-color);
-}
-
-.logo {
-  font-size: 64px;
-  color: transparent;
-  background-image: url('../assets/images/kurdstan.jpg');
-  background-clip: text;
-  background-size: cover;
-  -webkit-background-clip: text;
-  background-position: center;
-}
-
-.logo-container {
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 8px 16px;
-}
-
-.fillup-side {
-  display: none;
-}
-
-.overlay {
-  color: var(--text-color);
-}
-
-/* 3. PC / Desktop */
-@media (min-width: 768px) {
-  .mainContainer {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .fillup-side {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: scroll;
-    scrollbar-width: none;
     justify-content: space-around;
-    width: 45%;
-    height: 75%;
-    background-color: var(--primary-color);
-    border-radius: 0 20px 20px 0;
-    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.4);
-  }
+    width: 100%;
+    height: 80%;
+    
 
-  .input-side {
-    width: 45%;
-    border-radius: 20px 0 0 20px;
-  }
-
-  .register-form {
-    height: 100%;
-  }
-
-  .image {
-    width: 80%;
-    border-radius: 20px;
-    height: auto;
-  }
-
-  .overlay {
-    width: 80%;
-    height: auto;
-  }
 }
+
+.textFiled{
+   padding: 15px 10px;   
+   width: 280px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--input-background);
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.submitButton{
+    padding: 15px 25px;
+    background-color: burlywood;
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ iframe {
+    width: 100%;
+    height: 100vh; /* full screen height */
+    border: none;
+  }
+
+
+
+
+
+
+
+.headings-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo{
+    
+   
+    font-size: 64px;
+    color: transparent;  
+    
+    
+    background-image: url('../assets/images/kurdstan.jpg');
+    background-clip: text;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-position: center;
+}
+
+.logo-container{
+    border-radius: 10px;
+    
+    background-color: black;
+}
+
+
+
+/* 3. PC / Desktop */
+@media (min-width: 768px) {
+    .mainContainer {
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+ 
+    .fillup-side{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        overflow: scroll;
+        scrollbar-width: none; /* Firefox */
+        
+        justify-content: space-around;
+        width: 45%;
+        height: 75%;
+        background-color: burlywood;
+        border-radius: 0 20px 20px 0;
+        box-shadow: 5px 0px 15px black;
+        
+        
+    }
+
+    .input-side{
+        width: 45%;
+        border-radius: 0;
+         border-radius: 20px 0 0 20px;
+        
+    }
+
+    .register-form {
+        height: 100%;
+        
+    }
+
+    .image {
+        width: 80%;
+        border-radius: 20px;
+        
+        height: auto;
+    }
+    
+    .overlay{
+        
+        width: 80%;
+        height: auto;
+
+
+    }
+
+}
+
+
+
