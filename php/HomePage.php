@@ -1,0 +1,82 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+  header('Location: login.php');
+  exit();
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomePage</title>
+  <link rel="stylesheet" href="css/HomePage.css" />
+</head>
+
+<body>
+  <div id="main-container" class="main-container">
+    <div id="SearchBarDiv" class="SearchBarDiv">
+      <div id="filterAndSearchDiv" class="filterAndSearchDiv">
+        <div class="filter" id="filter" name="filter">
+          <img src="./assets/icons/filter .png" alt="" />
+        </div>
+        <input
+          id="SearchBar"
+          name="SearchBtn"
+          class="SearchBar"
+          type="text"
+          placeholder="Search for books, authors, genres..." />
+      </div>
+
+      <button id="SearchBtn" name="SearchBtn" class="SearchBtn" type="button">
+        Search
+      </button>
+    </div>
+
+    <div class="grid-container">
+      <div class="item">
+        <div name="book-image" class="book-image">
+
+        </div>
+        <div name="book-details" class="book-details">
+          <h3>Book 1</h3>
+          <p>book about geography of a country</p>
+
+
+        </div>
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+  </div>
+
+  <script src="./js/HomePage.js"></script>
+</body>
+
+</html>
