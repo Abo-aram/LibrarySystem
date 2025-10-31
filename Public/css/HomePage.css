@@ -122,6 +122,7 @@
   gap: 10px; /* space between items */
 
   padding: 10px;
+  margin-bottom: 125px;
 }
 
 .item {
@@ -132,20 +133,73 @@
   text-align: center;
  
   border-radius:10px;
-  border: 4px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   overflow: hidden;
 }
 
 .book-image{
-    height: 75%;
-    background-color: blue;
-    border-radius: 5px;
+    height: 70%;
+    background-color: blanchedalmond;
+    border-radius: 5px 5px 0px 0px;
 
 }
 
 .book-details{
     display: flex;
     padding: 5px;
+    justify-content: space-between;
     color: var(--text-color);
     
 }
+
+.book-name-description{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+}
+
+.book-name-description p{
+    font-size: small;
+    text-overflow: ellipsis;
+    width: 150px;
+    text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    
+}
+
+.quantity{
+    background-color: rgba(0, 255, 21, 0.441);
+    height: fit-content;
+    width: 50px;
+    border-radius: 5px;
+
+}
+
+.pagination{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(1px,1fr));
+    margin-bottom: 125px;
+    width: 250px;
+}
+
+.pagination-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    
+
+}
+
+.selected-page{
+    scale: 1.5;
+    margin: 2px;
+}
+
