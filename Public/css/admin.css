@@ -23,8 +23,6 @@ html {
 
 body {
   display: flex;
-
-  background-color: var(--background-color);
   justify-content: baseline;
 
   margin: 0;
@@ -35,9 +33,10 @@ body {
 .main-div {
   max-width: 1400px;
   width: 100%;
+  
   margin-right: auto;
   margin-left: auto;
-  background-color: darkgray;
+  background-color: white;
 
   display: flex;
 }
@@ -51,6 +50,8 @@ body {
   padding: 10px;
   padding-top: 100px;
   padding-bottom: 100px;
+  box-shadow: 2px 2px 12px gray;
+ 
 }
 
 .book-image img {
@@ -124,4 +125,48 @@ body {
 .managment {
   flex-basis: 1;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
 }
+
+.admin-header{
+  background-color:var(--background-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+    box-shadow: 2px 2px 12px gray;
+  
+}
+
+.summery-section{
+  height: 300px;
+  background-color: var(--background-color);
+  margin-bottom: 10px;
+  border-radius:5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 10px;
+  box-shadow: 2px 2px 12px gray;
+}
+
+.user-insights-section{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  background-color: var(--background-color);
+ box-shadow: 2px 2px 12px gray;
+  border-radius: 5px;
+  height: 400px;
+  margin-right: 10px;
+  
+}
+
+
+
